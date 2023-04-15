@@ -1,5 +1,6 @@
 function run(){
     var str = document.getElementById("input").value.toLowerCase().split("")
+    // var str = "naveen@gmail.com".split("")
     var alpha = "abcdefghijklmnopqrstuvwxyz".split("")
     var num = "1234567890".split("")
     
@@ -27,9 +28,11 @@ function run(){
         if(str[i]=="."){
             dotbool = true
             let com = str.slice(i).join("")
+            console.log(com)
             combool = tlds.some((i)=> i==com)
-    
-            if(str[i+1]=="."){
+            console.log(combool)
+            
+            if(str[i+1]=="." || str[i+1]=="@"){
                 dotbool = false
             }
             
@@ -43,7 +46,6 @@ function run(){
         for(let j = 0; j < num.length; j++){
             
             if(str[i]==num[j]){
-                console.log(i)
                numbool = true
             }
             
@@ -61,10 +63,10 @@ function run(){
     }
     if(alphabool && numbool && Abool && dotbool && combool && legthbool && spacebool){
         alert("valid")
-        // console.log("valid")
+        console.log("valid")
     }else{
         alert("invalid")
-        // console.log("invalid")
+        console.log("invalid")
     }
 }
 
