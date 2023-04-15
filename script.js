@@ -1,5 +1,5 @@
-function run(){
-    var str = document.getElementById("input").value.toLowerCase().split("")
+// function run(){
+    var str = "naven@gmail.com".toLowerCase().split("")
     var alpha = "abcdefghijklmnopqrstuvwxyz".split("")
     var num = "1234567890".split("")
     
@@ -35,13 +35,15 @@ function run(){
             
         }
         for(let j = 0; j < alpha.length; j++){
-            if(str[i]==str[j]){
+            if(str[i]==alpha[j]){
                 alphabool = true
             }
             
         }
         for(let j = 0; j < num.length; j++){
-            if(str[i]==str[j]){
+            
+            if(str[i]==num[j]){
+                console.log(i)
                numbool = true
             }
             
@@ -58,10 +60,12 @@ function run(){
         legthbool = false
     }
     if(alphabool && numbool && Abool && dotbool && combool && legthbool && spacebool){
-        alert("valid")
+        // alert("valid")
+        console.log("valid")
     }else{
-        alert("invalid")
+        // alert("invalid")
+        console.log("invalid")
     }
-}
+// }
 
 // console.log(str)
