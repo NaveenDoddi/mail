@@ -1,5 +1,5 @@
-// function run(){
-    var str = "naven@gmail.com".toLowerCase().split("")
+function run(){
+    var str = document.getElementById("input").value.toLowerCase().split("")
     var alpha = "abcdefghijklmnopqrstuvwxyz".split("")
     var num = "1234567890".split("")
     
@@ -60,12 +60,12 @@
         legthbool = false
     }
     if(alphabool && numbool && Abool && dotbool && combool && legthbool && spacebool){
-        // alert("valid")
-        console.log("valid")
+        alert("valid")
+        // console.log("valid")
     }else{
-        // alert("invalid")
-        console.log("invalid")
+        alert("invalid")
+        // console.log("invalid")
     }
-// }
+}
 
 // console.log(str)
